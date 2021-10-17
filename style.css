@@ -1,10 +1,72 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, :after, :before { box-sizing: inherit; }
-
+html {
+  box-sizing: border-box;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
 body {
-	font-family: sans-serif;
-	font-size: 14px;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.nadpis {
+  text-align: center;
+}
+
+.kontakt {
+  border: 2px solid rgb(216, 214, 214);
+  box-shadow: 2px 2px 1px #888888;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.obrazek {
+  border-radius: 50%;
+  max-width: 100%;
+}
+
+.kontakt {
+  margin: 20px 0;
+}
+
+@media screen and (min-width: 540px) {
+  .kontakty {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  .kontakt {
+    text-align: left;
+    display: flex;
+    flex: 1 1 50%;
+    margin: 20px;
+  }
+  .obrazek {
+    flex: 1 1 20%;
+    margin-right: 2%;
+  }
+
+  .popis {
+    flex: 1 1 76%;
+    margin-left: 2%;
+  }
+}
+@media screen and (min-width: 960px) {
+.kontakty {flex-wrap: nowrap;}
+  .kontakt {
+    text-align: center;
+    flex: 1 1 25%;
+    display: block;
+  }
+  .obrazek {
+    margin-right: 0;
+  }
+  .popis {
+    margin-left: 0;
+  }
 }
 
 /* ---------------------------------------------------- */
