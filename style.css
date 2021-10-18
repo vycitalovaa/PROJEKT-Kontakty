@@ -14,7 +14,6 @@ body {
 .nadpis {
   text-align: center;
 }
-
 .kontakt {
   border: 2px solid rgb(216, 214, 214);
   box-shadow: 2px 2px 1px #888888;
@@ -22,44 +21,48 @@ body {
   border-radius: 5px;
   text-align: center;
 }
-
 .obrazek {
   border-radius: 50%;
   max-width: 100%;
 }
-
 .kontakt {
   margin: 20px 0;
 }
-
 @media screen and (min-width: 540px) {
   .kontakty {
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
+   justify-content: space-between;
+   width: 100%;
+  
   }
   .kontakt {
     text-align: left;
     display: flex;
-    flex: 1 1 50%;
-    margin: 20px;
+    flex-basis: calc((100% - 20px) / 2);
+    margin: 10px 0;
+    
   }
   .obrazek {
     flex: 1 1 20%;
     margin-right: 2%;
   }
-
   .popis {
     flex: 1 1 76%;
     margin-left: 2%;
   }
 }
+
+
 @media screen and (min-width: 960px) {
-.kontakty {flex-wrap: nowrap;}
+.kontakty {flex-wrap: nowrap;
+  justify-content: space-between;
+}
   .kontakt {
     text-align: center;
-    flex: 1 1 25%;
+   flex-basis: calc((100% - 40px) / 4);
     display: block;
+    
   }
   .obrazek {
     margin-right: 0;
